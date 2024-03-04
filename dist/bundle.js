@@ -51,7 +51,7 @@ nav .side-bar {
   border-right: 1px black solid;
   background-color: #c5c3c3;
   height: 100vh;
-  width: 200px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,9 +75,9 @@ nav .side-bar ul li {
 .todo-list {
   margin: 0 auto;
   padding: 1rem;
-  width: 70%;
+  width: 60%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
   grid-template-rows: auto;
 }
@@ -90,11 +90,10 @@ nav .side-bar ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
 }
 .todo-list .todo .todo-title {
-  font-size: 2rem;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;AACF;;AAEA;EACE,2DAAA;EACA,eAAA;EACA,uBAAA;EACA,YAAA;EACA,yBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mCAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;AACF;AACE;EACE,kBAAA;EACA,SAAA;EACA,OAAA;EACA,6BAAA;EACA,yBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;AACJ;AACI;EACE,0BAAA;AACN;AAEI;EACE,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,kBAAA;AAAN;AACM;EACE,eAAA;EACA,8BAAA;AACR;;AAMA;EACE,cAAA;EACA,aAAA;EACA,UAAA;EACA,aAAA;EACA,8BAAA;EACA,cAAA;EACA,wBAAA;AAHF;AAKE;EACE,uBAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;AAHJ;AAKI;EACE,eAAA;AAHN","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n}\r\n\r\nbody {\r\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: white;\r\n  background-color: #c5c3c3;\r\n}\r\n\r\nnav {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: rgb(90, 174, 248);\r\n  height: 50px;\r\n  color: black;\r\n  position: relative;\r\n  \r\n  .side-bar {\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 0;\r\n    border-right: 1px black solid;\r\n    background-color:#c5c3c3;\r\n    height: 100vh;\r\n    width: 200px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 1rem;\r\n\r\n    h2 {\r\n      text-decoration: underline;\r\n    }\r\n\r\n    ul {\r\n      list-style: none;\r\n      text-align: center;\r\n      padding: 0.5rem;\r\n      margin-top: 0.5rem;\r\n      li {\r\n        padding: 0.5rem;\r\n        border-bottom: solid 2px black;\r\n      }\r\n    }\r\n\r\n  }\r\n}\r\n\r\n.todo-list {\r\n  margin: 0 auto;\r\n  padding: 1rem;\r\n  width:70%;\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  grid-gap: 10px;\r\n  grid-template-rows: auto;\r\n\r\n  .todo {\r\n    background-color: black;\r\n    color: white;\r\n    padding: 1rem;\r\n    border-radius: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 300px;\r\n    \r\n    .todo-title {\r\n      font-size: 2rem;\r\n    }\r\n\r\n  }\r\n}\r\n\r\n"],"sourceRoot":""}]);
+  font-size: 1rem;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;AACF;;AAEA;EACE,2DAAA;EACA,eAAA;EACA,uBAAA;EACA,YAAA;EACA,yBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mCAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;AACF;AACE;EACE,kBAAA;EACA,SAAA;EACA,OAAA;EACA,6BAAA;EACA,yBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;AACJ;AACI;EACE,0BAAA;AACN;AAEI;EACE,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,kBAAA;AAAN;AACM;EACE,eAAA;EACA,8BAAA;AACR;;AAMA;EACE,cAAA;EACA,aAAA;EACA,UAAA;EACA,aAAA;EACA,0BAAA;EACA,cAAA;EACA,wBAAA;AAHF;AAKE;EACE,uBAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AAHJ;AAKI;EACE,eAAA;AAHN","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n}\r\n\r\nbody {\r\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: white;\r\n  background-color: #c5c3c3;\r\n}\r\n\r\nnav {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: rgb(90, 174, 248);\r\n  height: 50px;\r\n  color: black;\r\n  position: relative;\r\n  \r\n  .side-bar {\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 0;\r\n    border-right: 1px black solid;\r\n    background-color:#c5c3c3;\r\n    height: 100vh;\r\n    width: 150px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 1rem;\r\n\r\n    h2 {\r\n      text-decoration: underline;\r\n    }\r\n\r\n    ul {\r\n      list-style: none;\r\n      text-align: center;\r\n      padding: 0.5rem;\r\n      margin-top: 0.5rem;\r\n      li {\r\n        padding: 0.5rem;\r\n        border-bottom: solid 2px black;\r\n      }\r\n    }\r\n\r\n  }\r\n}\r\n\r\n.todo-list {\r\n  margin: 0 auto;\r\n  padding: 1rem;\r\n  width: 60%;\r\n  display: grid;\r\n  grid-template-columns: 1fr;\r\n  grid-gap: 10px;\r\n  grid-template-rows: auto;\r\n\r\n  .todo {\r\n    background-color: black;\r\n    color: white;\r\n    padding: 1rem;\r\n    border-radius: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    \r\n    .todo-title {\r\n      font-size: 1rem;\r\n    }\r\n\r\n  }\r\n}\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -539,6 +538,63 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/components/Tasks.js":
+/*!*********************************!*\
+  !*** ./src/components/Tasks.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Tasks)
+/* harmony export */ });
+class Tasks {
+  constructor() {
+    this.tasks = [];
+  }
+
+  addTask(task) {
+    this.tasks.push(task);
+  }
+
+  removeTask(id) {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
+}
+
+
+/***/ }),
+
+/***/ "./src/components/UIhandler.js":
+/*!*************************************!*\
+  !*** ./src/components/UIhandler.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ UIhandler)
+/* harmony export */ });
+class UIhandler {
+  constructor(data) {
+    this.data = data;
+    this.taskList = document.querySelector(".todo-list");
+  }
+
+  renderTasks() {
+    this.taskList.innerHTML = "";
+    this.data.tasks.forEach((task) => {
+      const taskElement = document.createElement("card");
+      taskElement.classList.add("todo");
+      taskElement.textContent = task.title;
+      this.taskList.appendChild(taskElement);
+    });
+  }
+}
+
+
 /***/ })
 
 /******/ 	});
@@ -622,9 +678,24 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _components_Tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Tasks */ "./src/components/Tasks.js");
+/* harmony import */ var _components_UIhandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/UIhandler */ "./src/components/UIhandler.js");
 
 
-console.log("Hello");
+
+const button = document.querySelector("button");
+
+const tasks = new _components_Tasks__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const ui = new _components_UIhandler__WEBPACK_IMPORTED_MODULE_2__["default"](tasks);
+
+button.addEventListener("click", () => {
+  tasks.addTask({
+    id: Math.random(),
+    title: "Example",
+  });
+});
+
+ui.renderTasks();
 
 })();
 
