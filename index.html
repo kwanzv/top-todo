@@ -9,18 +9,48 @@
     <div id="main">
       <nav>
         <h1>Todo App</h1>
+
         <div class="side-bar">
           <h2>Filters</h2>
-          <ul>
+          <ul id="filters">
             <li>All todo's</li>
             <li>Active todo's</li>
             <li>Completed todo's</li>
           </ul>
+
+          <h2>Projects</h2>
+          <button id="show-modal">Add a project</button>
+          <ul id="project-list"></ul>
         </div>
       </nav>
 
-      <section class="todo-list"></section>
-      <button class="text-2xl bg-blue-500">Example</button>
+      <section class="todo-wrapper">
+        
+        <form>
+          <input
+            type="text"
+            placeholder="What needs to be done?"
+            id="todo-title"
+          />
+          <label for="priority">Choose a priority:</label>
+          <select id="priority" name="priority">
+            <option value="low ">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </form>
+        <div class="todo-list"></div>
+        <button id="make-todo">Add todo</button>
+      </section>
+      <section class="modal">
+        <div class="modal-content">
+          <form id="project-form">
+            <p>Create a project</p>
+
+            <input type="text" id="project-form-title" placeholder="Project name" />
+            <button id="add-project-btn">Create</button>
+          </form>
+      </section>
     </div>
   </body>
 </html>
