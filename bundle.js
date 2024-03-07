@@ -27,6 +27,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
   padding: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .todo-wrapper {
+    transform: translateX(30%);
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .todo-wrapper form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .todo {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+  }
+}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -164,7 +184,7 @@ form select {
   font-weight: bold;
   width: 125px;
   margin-bottom: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;AACF;;AAEA;EACE,2DAAA;EACA,eAAA;EACA,uBAAA;EACA,YAAA;EACA,yBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mCAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;AACF;AACE;EACE,kBAAA;EACA,SAAA;EACA,SAAA;EACA,OAAA;EACA,6BAAA;EACA,yBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;AACJ;AACI;EACE,0BAAA;AACN;AAEI;EACE,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,kBAAA;AAAN;AACM;EACE,eAAA;EACA,8BAAA;AACR;;AAQA;EAEE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AANF;AAQE;EACE,YAAA;EACA,aAAA;EACA,uBAAA;EACA,gBAAA;EACA,aAAA;EACA,SAAA;EACA,mBAAA;AANJ;AAQI;EACE,eAAA;EACA,YAAA;EACA,YAAA;AANN;;AAaA;EACE,mCAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,iBAAA;EACA,eAAA;AAVF;;AAaA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AAVF;AAWE;EACE,YAAA;AATJ;AAWE;EACE,eAAA;EACA,UAAA;AATJ;AAWE;EACE,eAAA;AATJ;;AAcA;EAEE,aAAA;AAZF;AAcE;EACE,aAAA;EACA,sBAAA;EACA,SAAA;AAZJ;AAaI;EACE,eAAA;EACA,YAAA;AAXN;;AAiBA;EACE,kBAAA;EACA,cAAA;EACA,eAAA;EACA,uBAAA;EACA,mBAAA;EACA,MAAA;EACA,OAAA;EACA,8BAAA;EACA,UAAA;EACA,WAAA;EACA,8BAAA;AAdF;;AAkBA;EACE,kBAAA;EACA,mCAAA;EACA,YAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;AAfF;;AAkBA;EACE,kBAAA;EACA,mCAAA;EACA,YAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;AAfF","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n}\r\n\r\nbody {\r\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: white;\r\n  background-color: #c5c3c3;\r\n}\r\n\r\nnav {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: rgb(90, 174, 248);\r\n  height: 50px;\r\n  color: black;\r\n  position: relative;\r\n  \r\n  .side-bar {\r\n    position: absolute;\r\n    top: 50px;\r\n    gap:1rem;\r\n    left: 0;\r\n    border-right: 1px black solid;\r\n    background-color:#c5c3c3;\r\n    height: 100vh;\r\n    width: 150px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 1rem;\r\n\r\n    h2 {\r\n      text-decoration: underline;\r\n    }\r\n\r\n    ul {\r\n      list-style: none;\r\n      text-align: center;\r\n      padding: 0.5rem;\r\n      margin-top: 0.5rem;\r\n      li {\r\n        padding: 0.5rem;\r\n        border-bottom: solid 2px black;\r\n      }\r\n    }\r\n\r\n  }\r\n}\r\n\r\n//title, description, dueDate and priority. \r\n\r\n.todo-wrapper {\r\n  \r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n  .todo {\r\n    color: black;\r\n    padding: 1rem;\r\n    border: 2px solid black;\r\n    list-style: none;\r\n    display: flex;\r\n    gap: 2rem;\r\n    margin-bottom: 1rem;\r\n\r\n    .li{\r\n      font-size: 1rem;\r\n      color:black;\r\n      margin: 1rem;\r\n      \r\n    }\r\n\r\n  }\r\n}\r\n\r\nbutton {\r\n  background-color: rgb(90, 174, 248);\r\n  border: none;\r\n  border-radius: 5px;\r\n  padding: 1rem;\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 1rem;\r\n  justify-content: center;\r\n  color: black;\r\n  label {\r\n    margin: 1rem;\r\n  }\r\n  input {\r\n    padding: 0.5rem;\r\n    width: 80%;\r\n  }\r\n  select {\r\n    padding: 0.5rem;\r\n  }\r\n}\r\n\r\n\r\n.modal {\r\n\r\n  display: none;\r\n\r\n  form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 2rem;\r\n    p {\r\n      font-size: 3rem;\r\n      color: white;\r\n    }\r\n  }\r\n  \r\n}\r\n\r\n.visible {\r\n  border-radius: 10%;\r\n  display: block;\r\n  position: fixed;\r\n  justify-content: center;\r\n  align-items: center;\r\n  top: 0;\r\n  left: 0;\r\n  transform: translate(50%, 20%);\r\n  width: 60%;\r\n  height: 70%;\r\n  background-color: rgba(0, 0, 0, 1);\r\n  }  \r\n\r\n\r\n.project {\r\n  border-radius: 5px;\r\n  background-color: rgb(90, 174, 248);\r\n  color: white;\r\n  font-weight: bold;\r\n  width: 125px;\r\n  margin-bottom:1rem;\r\n}\r\n\r\n.active {\r\n  border-radius: 5px;\r\n  background-color: rgb(34, 121, 197);\r\n  color: white;\r\n  font-weight: bold;\r\n  width: 125px;\r\n  margin-bottom:1rem;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;AACF;;AAEA;EAEG;IACC,0BAAA;IACA,UAAA;IACA,cAAA;IACA,gBAAA;EAAF;EAEE;IACE,aAAA;IACA,sBAAA;IACA,WAAA;EAAJ;EAGA;IACE,sBAAA;IACA,WAAA;IACJ,aAAA;IACA,uBAAA;IACA,kBAAA;EADE;AACF;AAIA;EACE,2DAAA;EACA,eAAA;EACA,uBAAA;EACA,YAAA;EACA,yBAAA;AAFF;;AAKA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mCAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;AAFF;AAIE;EACE,kBAAA;EACA,SAAA;EACA,SAAA;EACA,OAAA;EACA,6BAAA;EACA,yBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;AAFJ;AAII;EACE,0BAAA;AAFN;AAKI;EACE,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,kBAAA;AAHN;AAIM;EACE,eAAA;EACA,8BAAA;AAFR;;AAWA;EAEE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AATF;AAWE;EACE,YAAA;EACA,aAAA;EACA,uBAAA;EACA,gBAAA;EACA,aAAA;EACA,SAAA;EACA,mBAAA;AATJ;AAWI;EACE,eAAA;EACA,YAAA;EACA,YAAA;AATN;;AAgBA;EACE,mCAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,iBAAA;EACA,eAAA;AAbF;;AAgBA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AAbF;AAcE;EACE,YAAA;AAZJ;AAcE;EACE,eAAA;EACA,UAAA;AAZJ;AAcE;EACE,eAAA;AAZJ;;AAiBA;EAEE,aAAA;AAfF;AAiBE;EACE,aAAA;EACA,sBAAA;EACA,SAAA;AAfJ;AAgBI;EACE,eAAA;EACA,YAAA;AAdN;;AAoBA;EACE,kBAAA;EACA,cAAA;EACA,eAAA;EACA,uBAAA;EACA,mBAAA;EACA,MAAA;EACA,OAAA;EACA,8BAAA;EACA,UAAA;EACA,WAAA;EACA,8BAAA;AAjBF;;AAqBA;EACE,kBAAA;EACA,mCAAA;EACA,YAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;AAlBF;;AAqBA;EACE,kBAAA;EACA,mCAAA;EACA,YAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;AAlBF","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n}\r\n\r\n@media screen and (max-width: 500px) {\r\n\r\n   .todo-wrapper {\r\n    transform: translateX(30%);\r\n    width:50%;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n\r\n    form {\r\n      display: flex;\r\n      flex-direction: column;\r\n      width: 100%;\r\n    }\r\n}\r\n  .todo {\r\n    flex-direction: column;\r\n    width: 100%;\r\ndisplay: flex;\r\njustify-content: center;\r\nalign-items: right;}\r\n}\r\n\r\n\r\nbody {\r\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: white;\r\n  background-color: #c5c3c3;\r\n}\r\n\r\nnav {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: rgb(90, 174, 248);\r\n  height: 50px;\r\n  color: black;\r\n  position: relative;\r\n  \r\n  .side-bar {\r\n    position: absolute;\r\n    top: 50px;\r\n    gap:1rem;\r\n    left: 0;\r\n    border-right: 1px black solid;\r\n    background-color:#c5c3c3;\r\n    height: 100vh;\r\n    width: 150px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 1rem;\r\n\r\n    h2 {\r\n      text-decoration: underline;\r\n    }\r\n\r\n    ul {\r\n      list-style: none;\r\n      text-align: center;\r\n      padding: 0.5rem;\r\n      margin-top: 0.5rem;\r\n      li {\r\n        padding: 0.5rem;\r\n        border-bottom: solid 2px black;\r\n      }\r\n    }\r\n\r\n  }\r\n}\r\n\r\n//title, description, dueDate and priority. \r\n\r\n.todo-wrapper {\r\n  \r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n  .todo {\r\n    color: black;\r\n    padding: 1rem;\r\n    border: 2px solid black;\r\n    list-style: none;\r\n    display: flex;\r\n    gap: 2rem;\r\n    margin-bottom: 1rem;\r\n\r\n    .li{\r\n      font-size: 1rem;\r\n      color:black;\r\n      margin: 1rem;\r\n      \r\n    }\r\n\r\n  }\r\n}\r\n\r\nbutton {\r\n  background-color: rgb(90, 174, 248);\r\n  border: none;\r\n  border-radius: 5px;\r\n  padding: 1rem;\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 1rem;\r\n  justify-content: center;\r\n  color: black;\r\n  label {\r\n    margin: 1rem;\r\n  }\r\n  input {\r\n    padding: 0.5rem;\r\n    width: 80%;\r\n  }\r\n  select {\r\n    padding: 0.5rem;\r\n  }\r\n}\r\n\r\n\r\n.modal {\r\n\r\n  display: none;\r\n\r\n  form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 2rem;\r\n    p {\r\n      font-size: 3rem;\r\n      color: white;\r\n    }\r\n  }\r\n  \r\n}\r\n\r\n.visible {\r\n  border-radius: 10%;\r\n  display: block;\r\n  position: fixed;\r\n  justify-content: center;\r\n  align-items: center;\r\n  top: 0;\r\n  left: 0;\r\n  transform: translate(50%, 20%);\r\n  width: 60%;\r\n  height: 70%;\r\n  background-color: rgba(0, 0, 0, 1);\r\n  }  \r\n\r\n\r\n.project {\r\n  border-radius: 5px;\r\n  background-color: rgb(90, 174, 248);\r\n  color: white;\r\n  font-weight: bold;\r\n  width: 125px;\r\n  margin-bottom:1rem;\r\n}\r\n\r\n.active {\r\n  border-radius: 5px;\r\n  background-color: rgb(34, 121, 197);\r\n  color: white;\r\n  font-weight: bold;\r\n  width: 125px;\r\n  margin-bottom:1rem;\r\n}\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -787,6 +807,31 @@ function validate(uuid) {
 
 /***/ }),
 
+/***/ "./src/components/Storage.js":
+/*!***********************************!*\
+  !*** ./src/components/Storage.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Storage)
+/* harmony export */ });
+class Storage {
+  constructor() {
+    this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  }
+  loadTasks() {
+    return this.tasks;
+  }
+  saveTasks(tasks) {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/components/Tasks.js":
 /*!*********************************!*\
   !*** ./src/components/Tasks.js ***!
@@ -797,33 +842,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Tasks)
 /* harmony export */ });
+/* harmony import */ var _components_Storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Storage */ "./src/components/Storage.js");
 
+
+const storage = new _components_Storage__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 class Tasks {
-  constructor() {
-    this.tasks = [
-      {
-        project: "Example project",
-        id: 1,
-        tasks: [
-          {
-            title: "Example task",
-            priority: "High",
-            completed: false,
-          },
-          {
-            title: "Example task 2",
-            priority: "High",
-            completed: false,
-          },
-        ],
-      },
-    ];
+  constructor(tasks) {
+    this.tasks = tasks;
   }
-
   addProject(project) {
     // Add project
     this.tasks.push(project);
+    storage.saveTasks(this.tasks);
   }
   addTask(task, id) {
     // Add task
@@ -832,6 +863,7 @@ class Tasks {
         project.tasks.push(task);
       }
     });
+    storage.saveTasks(this.tasks);
   }
 
   removeTask(id) {
@@ -859,6 +891,10 @@ class UIhandler {
     this.taskForm = document.querySelector("#project-list");
   }
 
+  loadHandle() {
+    return console.log(this.data);
+  }
+
   handleProjectClick(e, id) {
     this.renderTasks(id);
     document.querySelectorAll("button").forEach((btn) => {
@@ -869,8 +905,7 @@ class UIhandler {
 
   renderProjects(id) {
     this.taskForm.innerHTML = "";
-
-    this.data.tasks.forEach((project) => {
+    this.data.forEach((project) => {
       const projectCard = document.createElement("button");
       projectCard.textContent = project.project;
       projectCard.classList.add("project");
@@ -887,7 +922,7 @@ class UIhandler {
 
   renderTasks(id) {
     this.taskList.innerHTML = "";
-    this.data.tasks.filter((task) => {
+    this.data.filter((task) => {
       if (task.id === id) {
         task.tasks.forEach((task) => {
           const taskCard = document.createElement("div");
@@ -987,9 +1022,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 /* harmony import */ var _components_Tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Tasks */ "./src/components/Tasks.js");
 /* harmony import */ var _components_UIhandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/UIhandler */ "./src/components/UIhandler.js");
+/* harmony import */ var _components_Storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Storage */ "./src/components/Storage.js");
+
 
 
 
@@ -999,8 +1036,9 @@ const showModal = document.querySelector("#show-modal");
 const modal = document.querySelector(".modal");
 const projectBtn = document.querySelector("#add-project-btn");
 const projectForm = document.querySelector("#project-form-title");
-const tasks = new _components_Tasks__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const ui = new _components_UIhandler__WEBPACK_IMPORTED_MODULE_2__["default"](tasks);
+const storage = new _components_Storage__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const tasks = new _components_Tasks__WEBPACK_IMPORTED_MODULE_1__["default"](storage.loadTasks());
+const ui = new _components_UIhandler__WEBPACK_IMPORTED_MODULE_2__["default"](storage.loadTasks());
 let activeID = 1;
 
 todoBtn.addEventListener("click", (event) => {
@@ -1022,7 +1060,7 @@ todoBtn.addEventListener("click", (event) => {
         active: true,
         priority: priority,
         completed: false,
-        id: (0,uuid__WEBPACK_IMPORTED_MODULE_3__["default"])(),
+        id: (0,uuid__WEBPACK_IMPORTED_MODULE_4__["default"])(),
       },
       activeID
     );
@@ -1042,7 +1080,7 @@ projectBtn.addEventListener("click", (event) => {
   event.preventDefault();
   if (projectForm.value === "") return;
   modal.classList.toggle("visible");
-  const id = (0,uuid__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  const id = (0,uuid__WEBPACK_IMPORTED_MODULE_4__["default"])();
   activeID = id;
   tasks.addProject({ project: projectForm.value, id: id, tasks: [] });
   projectForm.value = "";
